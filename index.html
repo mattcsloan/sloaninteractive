@@ -1,0 +1,362 @@
+<doctype html>
+<html>
+<head>
+  <title>Sloan Interactive | Wordpress and Web application Design and Development | Ohio</title>
+  <link href="styles/layout.css" rel="stylesheet" />
+  <style type="text/css">
+    body
+    {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      background: #fcfcfc;
+      color: #666;
+      font-size: 16px;
+    }
+
+    h1
+    {
+      padding: 16px;
+      margin: 0 0 24px 0;
+      line-height: 1.1em;
+      text-align: center;
+      display: block;
+      font-weight: 400;
+      font-size: 24px;
+      position: relative;
+    }
+
+    h1:after
+    {
+      content: '';
+      height: 1px;
+      width: 100px;
+      background: #ddd;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -50px;
+    }
+
+    p
+    {
+      margin: 0 0 16px 0;
+    }
+
+    .wrapper
+    {
+      width: 100%;
+      max-width: 1000px;
+      padding: 12px 24px;
+      box-sizing: border-box;
+      margin: 0 auto;
+    }
+
+    .wrapper:after
+    {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+    .header
+    {
+      background: #fff;
+    }
+
+    .header img
+    {
+      padding: 12px 24px;
+    }
+
+    .header .wrapper
+    {
+      padding: 0;
+    }
+
+    .navigation
+    {
+      float: right;
+    }
+
+    .navigation a
+    {
+      display: block;
+      float: left;
+      margin-left: 24px;
+      padding: 24px;
+      text-decoration: none;
+      font-size: 19px;
+      color: #999;
+      border-bottom: 2px solid transparent;
+    }
+
+    .navigation a:hover
+    {
+      text-decoration: none;
+      color: #427bbf;
+      border-bottom: 2px solid #427bbf;
+    }
+
+    .hero p
+    {
+      text-align: center;
+      font-size: 24px;
+      color: #427bbf;
+      line-height: 1.1em;
+      margin: 48px 0;
+    }
+
+    .hero strong
+    {
+      display: block;
+      font-size: 36px;
+      line-height: 1.4em;
+      font-weight: 600;
+    }
+
+    .modules.wrapper
+    {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .module
+    {
+      border: 1px solid #f2f2f2;
+      border-radius: 4px;
+      box-shadow: 0 0 14px rgba(0,0,0,0.03);
+      float: left;
+      width: 49%;
+      margin: 0 2% 24px 0;
+      box-sizing: border-box;
+      background: #fff;
+    }
+
+    .module + .module
+    {
+      float: right;
+      margin-right: 0;
+    }
+
+    .module h1
+    {
+      padding: 28px 16px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .module h1:after
+    {
+      display: none;
+    }
+
+    .mod-content
+    {
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .mod-content p
+    {
+      text-align: left;
+      line-height: 1.6em;
+    }
+
+    a.btn
+    {
+      padding: 18px 24px;
+      max-width: 220px;
+      text-align: center;
+      color: #fff;
+      background: #5087c7;
+      background: linear-gradient(#5087c8, #4479b8);
+      border-radius: 4px;
+      box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+      margin: 0 auto;
+      font-size: 18px;
+      text-decoration: none;
+      display: block;
+    }
+
+    a.btn:hover
+    {
+      background: #4479b8;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .mod-content a.btn
+    {
+      margin-top: 32px;
+    }
+
+    .mod-content p:last-child
+    {
+      margin-top: 4px;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    a.caption
+    {
+      font-size: 14px;
+      color: #999;
+      text-decoration: none;
+    }
+
+    a.caption:hover
+    {
+      text-decoration: underline;
+      color: #666;
+    }
+
+    .other-services
+    {
+      background: #fff;
+      box-shadow: 0 -12px 18px rgba(0,0,0,0.015);
+      margin-top: -48px;
+      padding-top: 48px;
+    }
+
+    .other-services ul
+    {
+      display: flex;
+      margin: 24px 0 36px;
+      padding: 0;
+    }
+
+    .other-services li
+    {
+      flex: 1 0 16.66%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 18px;
+      color: #888;
+      text-align: center;
+    }
+
+    .about
+    {
+      padding-top: 48px;
+      padding-bottom: 64px;
+    }
+
+    .about img
+    {
+      width: 22%;
+      float: left;
+      margin-right: 4%;
+    }
+
+    .about p
+    {
+      float: right;
+      width: 74%;
+    }
+
+    .about p:last-child
+    {
+      margin-bottom: 0;
+    }
+
+    .contact
+    {
+      background: #427bbf;
+      color: #fff;
+    }
+
+    .contact h1
+    {
+      color: #d6e1ef;
+    }
+
+    .half
+    {
+      float: left;
+      width: 49%;
+      margin: 0 2% 24px 0;
+    }
+
+    .half + .half
+    {
+      float: right;
+      margin-right: 0;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="wrapper">
+      <a href="/">
+        <img src="img/logo.png" alt="Sloan Interactive" />
+      </a>
+      <div class="navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero">
+    <div class="wrapper">
+      <p>Specializing in the design and development of responsive <strong>Wordpress websites and web applications</strong></p>
+    </div>
+  </div>
+  <a name="services"></a>
+  <div class="modules wrapper">
+    <div class="module">
+      <h1>Custom Wordpress Themes</h1>
+      <div class="mod-content">
+        <p>We build our responsive Wordpress themes and plugins from scratch to ensure they are lightweight and load fast for your users (compared to pre-built themes). <strong><em>Get a unique custom theme that is designed and built just for you.</em></strong></p>
+        <a class="btn" href="#contact">Get Started</a>
+        <p>
+          <a class="caption" href="#contact">with a free quote</a>
+        </p>
+      </div>
+    </div>
+    <div class="module">
+      <h1>Web Applications</h1>
+      <div class="mod-content">
+        <p>Whether you just need a little help with your web application or would like a full application created, we can help with that. We love working on these projects and can provide any level of design or development services needed.</p>
+        <a class="btn" href="#contact">Get Started</a>
+        <p>
+          <a class="caption" href="#contact">with a free quote</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="other-services">
+    <div class="wrapper">
+      <h1>Other Services</h1>
+      <ul>
+        <li>Small Websites</li>
+        <li>Landing Pages</li>
+        <li>Logo Design</li>
+        <li>Business Cards</li>
+        <li>Postcards</li>
+        <li>Marketing</li>
+      </ul>
+    </div>
+  </div>
+  <a name="about"></a>
+  <div class="wrapper about">
+    <h1>About</h1>
+    <img src="img/social-profile.jpg" alt="Matt Sloan" />
+    <p>Sloan Interactive is mainly the work of Matt Sloan. The fact that you will see "we" used frequently is not meant to trick you. While the majority of your interaction will be with Matt, Sloan Interactive has many resources available when needed for services like copywriting and marketing. Depending on the size or complexity of the project, additional designers and developers can be included in your project as well.</p>
+    <p>Matt Sloan is a designer and developer with over 10 years of experience helping businesses to put their best foot forward through consistent branding from their logo to printed materials and into their digital presence.</p>
+  </div>
+  <a name="contact"></a>
+  <div class="contact">
+    <div class="wrapper">
+      <h1>Contact</h1>
+      <div class="half">
+        <p>Hello</p>
+      </div>
+      <div class="half">
+        <p>Hello</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
