@@ -2,293 +2,16 @@
 <html>
 <head>
   <title>Sloan Interactive | Wordpress and Web application Design and Development | Ohio</title>
-  <link href="styles/layout.css" rel="stylesheet" />
-  <style type="text/css">
-    body
-    {
-      margin: 0;
-      padding: 0;
-      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-      background: #fcfcfc;
-      color: #666;
-      font-size: 16px;
-    }
-
-    h1
-    {
-      padding: 16px;
-      margin: 0 0 24px 0;
-      line-height: 1.1em;
-      text-align: center;
-      display: block;
-      font-weight: 400;
-      font-size: 24px;
-      position: relative;
-    }
-
-    h1:after
-    {
-      content: '';
-      height: 1px;
-      width: 100px;
-      background: #ddd;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      margin-left: -50px;
-    }
-
-    p
-    {
-      margin: 0 0 16px 0;
-    }
-
-    .wrapper
-    {
-      width: 100%;
-      max-width: 1000px;
-      padding: 12px 24px;
-      box-sizing: border-box;
-      margin: 0 auto;
-    }
-
-    .wrapper:after
-    {
-      display: block;
-      content: '';
-      clear: both;
-    }
-
-    .header
-    {
-      background: #fff;
-    }
-
-    .header img
-    {
-      padding: 12px 24px;
-    }
-
-    .header .wrapper
-    {
-      padding: 0;
-    }
-
-    .navigation
-    {
-      float: right;
-    }
-
-    .navigation a
-    {
-      display: block;
-      float: left;
-      margin-left: 24px;
-      padding: 24px;
-      text-decoration: none;
-      font-size: 19px;
-      color: #999;
-      border-bottom: 2px solid transparent;
-    }
-
-    .navigation a:hover
-    {
-      text-decoration: none;
-      color: #427bbf;
-      border-bottom: 2px solid #427bbf;
-    }
-
-    .hero p
-    {
-      text-align: center;
-      font-size: 24px;
-      color: #427bbf;
-      line-height: 1.1em;
-      margin: 48px 0;
-    }
-
-    .hero strong
-    {
-      display: block;
-      font-size: 36px;
-      line-height: 1.4em;
-      font-weight: 600;
-    }
-
-    .modules.wrapper
-    {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-
-    .module
-    {
-      border: 1px solid #f2f2f2;
-      border-radius: 4px;
-      box-shadow: 0 0 14px rgba(0,0,0,0.03);
-      float: left;
-      width: 49%;
-      margin: 0 2% 24px 0;
-      box-sizing: border-box;
-      background: #fff;
-    }
-
-    .module + .module
-    {
-      float: right;
-      margin-right: 0;
-    }
-
-    .module h1
-    {
-      padding: 28px 16px;
-      border-bottom: 1px solid #eee;
-    }
-
-    .module h1:after
-    {
-      display: none;
-    }
-
-    .mod-content
-    {
-      padding: 28px 24px;
-      text-align: center;
-    }
-
-    .mod-content p
-    {
-      text-align: left;
-      line-height: 1.6em;
-    }
-
-    a.btn
-    {
-      padding: 18px 24px;
-      max-width: 220px;
-      text-align: center;
-      color: #fff;
-      background: #5087c7;
-      background: linear-gradient(#5087c8, #4479b8);
-      border-radius: 4px;
-      box-shadow: 0 2px 2px rgba(0,0,0,0.05);
-      margin: 0 auto;
-      font-size: 18px;
-      text-decoration: none;
-      display: block;
-    }
-
-    a.btn:hover
-    {
-      background: #4479b8;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .mod-content a.btn
-    {
-      margin-top: 32px;
-    }
-
-    .mod-content p:last-child
-    {
-      margin-top: 4px;
-      margin-bottom: 0;
-      text-align: center;
-    }
-
-    a.caption
-    {
-      font-size: 14px;
-      color: #999;
-      text-decoration: none;
-    }
-
-    a.caption:hover
-    {
-      text-decoration: underline;
-      color: #666;
-    }
-
-    .other-services
-    {
-      background: #fff;
-      box-shadow: 0 -12px 18px rgba(0,0,0,0.015);
-      margin-top: -48px;
-      padding-top: 48px;
-    }
-
-    .other-services ul
-    {
-      display: flex;
-      margin: 24px 0 36px;
-      padding: 0;
-    }
-
-    .other-services li
-    {
-      flex: 1 0 16.66%;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      font-size: 18px;
-      color: #888;
-      text-align: center;
-    }
-
-    .about
-    {
-      padding-top: 48px;
-      padding-bottom: 64px;
-    }
-
-    .about img
-    {
-      width: 22%;
-      float: left;
-      margin-right: 4%;
-    }
-
-    .about p
-    {
-      float: right;
-      width: 74%;
-    }
-
-    .about p:last-child
-    {
-      margin-bottom: 0;
-    }
-
-    .contact
-    {
-      background: #427bbf;
-      color: #fff;
-    }
-
-    .contact h1
-    {
-      color: #d6e1ef;
-    }
-
-    .half
-    {
-      float: left;
-      width: 49%;
-      margin: 0 2% 24px 0;
-    }
-
-    .half + .half
-    {
-      float: right;
-      margin-right: 0;
-      text-align: right;
-    }
-  </style>
+  <link href="styles/layout.css" rel="stylesheet" type="text/css" />
+  <link href="fonts/si-icons/style.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+  <link href="img/favicon.png" rel="icon" type="image/png" />
+  <link href="img/icon.png" rel="apple-touch-icon" sizes="114x114" />
 </head>
 <body>
   <div class="header">
     <div class="wrapper">
-      <a href="/">
+      <a href="#">
         <img src="img/logo.png" alt="Sloan Interactive" />
       </a>
       <div class="navigation">
@@ -309,9 +32,9 @@
       <h1>Custom Wordpress Themes</h1>
       <div class="mod-content">
         <p>We build our responsive Wordpress themes and plugins from scratch to ensure they are lightweight and load fast for your users (compared to pre-built themes). <strong><em>Get a unique custom theme that is designed and built just for you.</em></strong></p>
-        <a class="btn" href="#contact">Get Started</a>
+        <a class="btn" href="#contact" data-check="1">Get Started</a>
         <p>
-          <a class="caption" href="#contact">with a free quote</a>
+          <a class="caption" href="#contact" data-check="1">with a free quote</a>
         </p>
       </div>
     </div>
@@ -319,9 +42,9 @@
       <h1>Web Applications</h1>
       <div class="mod-content">
         <p>Whether you just need a little help with your web application or would like a full application created, we can help with that. We love working on these projects and can provide any level of design or development services needed.</p>
-        <a class="btn" href="#contact">Get Started</a>
+        <a class="btn" href="#contact" data-check="2">Get Started</a>
         <p>
-          <a class="caption" href="#contact">with a free quote</a>
+          <a class="caption" href="#contact" data-check="2">with a free quote</a>
         </p>
       </div>
     </div>
@@ -351,12 +74,171 @@
     <div class="wrapper">
       <h1>Contact</h1>
       <div class="half">
-        <p>Hello</p>
+        <h2>How can we help you?</h2>
+        <ul class="checkbox-list">
+          <li>
+            <label>
+              <input type="checkbox" name="contact-method" />
+              <i class="icon icon-checkbox-unchecked"></i>
+              <span>I need help with a website.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="contact-method" />
+              <i class="icon icon-checkbox-unchecked"></i>
+              <span>I need help with a web application.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="contact-method" />
+              <i class="icon icon-checkbox-unchecked"></i>
+              <span>Tell me what I need.</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="contact-method" />
+              <i class="icon icon-checkbox-unchecked"></i>
+              <span>Other</span>
+            </label>
+          </li>
+        </ul>
+        <input type="text" placeholder="Name" />
+        <input type="text" placeholder="Email" />
+        <textarea placeholder="Message"></textarea>
+        <input type="submit" value="Send Message" />
       </div>
       <div class="half">
-        <p>Hello</p>
+        <h2>We're Social</h2>
+        <ul class="social-links">
+          <li>
+            <a class="fb" href="http://twitter.com/mattcsloan" target="_blank">
+              <span>twitter.com/mattcsloan</span>
+              <i class="icon icon-social-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="dribbble" href="http://dribbble.com/sloan" target="_blank">
+              <span>dribbble.com/sloan</span>
+              <i class="icon icon-social-dribbble"></i>
+            </a>
+          </li>
+          <li>
+            <a class="email" href="mailto:web@sloaninteractive.com" target="_blank">
+              <span>web@sloaninteractive.com</span>
+              <i class="icon icon-email"></i>
+            </a>
+          </li>
+        </ul>
+        <img src="img/made-in-ohio.png" alt="Websites and Web Applications Made In Ohio" />
       </div>
     </div>
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+
+    $(document).ready(function() {
+      //find querystring value and scroll to element
+      var viewSection = get_urid('view');
+      if($('a[name="' + viewSection + '"]').length) {
+        var elem = $('a[name="' + viewSection + '"]');
+        scrollToDiv(elem);
+      }
+
+      $('.navigation').addClass('transition');
+    });
+
+    // check any link starting with # and scroll page to that anchor
+    $(document).on('click', 'a[href^="#"]', function() {
+      if($(this).attr('href') === "#") {
+        var target = '';
+        var elem = $('body');
+      } else {
+        var target = $(this).attr('href').split('#')[1];
+        var elem = $('a[name="' + target + '"]');
+      }
+      scrollToDiv(elem);
+      // setTimeout(function() {
+      //   window.location.hash = target;
+      // }, 800);
+      if($(this).parent().hasClass('navigation')) {
+        $('.navigation .active').removeClass('active');
+        $(this).addClass('active');
+      }
+
+      if($(this).attr('data-check')) {
+        var itemNumber = $(this).attr('data-check');
+        $('.checkbox-list li').each(function(index) {
+          if(parseInt(itemNumber) - 1 === index) {
+            $('input', this).prop('checked', true);
+          } else {
+            $('input', this).prop('checked', false);
+          }
+        });
+      }
+      return false;
+    });
+
+    // 
+    $(window).on('scroll', function () {
+      var windowScroll = $(this).scrollTop();
+
+      var sectionMap = [{
+        "sectionIndex": 0,
+        "section": "top",
+        "position": 0
+      }];
+      $('.navigation a').each(function(index) {
+        var sectionName = $(this).attr('href').split('#')[1];
+        var sectionPos = $('a[name="' + sectionName + '"]').next().offset();
+        var sectionTop = sectionPos.top;
+        sectionMap.push({
+          "sectionIndex": index + 1,
+          "section": sectionName,
+          "position": sectionTop
+        });
+      });
+
+      for(i=0;i<sectionMap.length;i++) {
+        if(windowScroll <= sectionMap[i].position) {
+          $('.navigation .active').removeClass('active');
+          $('.navigation a:nth-child(' + sectionMap[i].sectionIndex + ')').addClass('active');
+          break;
+        }
+      }
+
+      if (windowScroll >= $('.header').height()) {
+        $('body').addClass('scrolled');
+      } else {
+        $('body').removeClass('scrolled');
+      }
+    });
+
+    function scrollToDiv(element) {
+      var offset = element.offset();
+      if($('body').hasClass('scrolled')) {
+        var offsetTop = offset.top - 50;
+      } else {
+        var offsetTop = offset.top - 82;
+      }
+      $('body, html').animate({
+        scrollTop: offsetTop
+      }, 500);
+    }
+
+    function get_urid(name) {
+      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+      var regexS = "[\\?&]" + name + "=([^&#]*)";
+      var regex = new RegExp(regexS);
+      var results = regex.exec(window.location.href);
+      if (results == null)
+      return "";
+      else
+      return results[1];
+    }
+
+  </script>
 </body>
 </html>

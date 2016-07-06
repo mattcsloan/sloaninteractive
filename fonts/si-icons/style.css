@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'si-icons';
+    src:    url('si-icons.eot?q1cpzx');
+    src:    url('si-icons.eot?q1cpzx#iefix') format('embedded-opentype'),
+        url('si-icons.ttf?q1cpzx') format('truetype'),
+        url('si-icons.woff?q1cpzx') format('woff'),
+        url('si-icons.svg?q1cpzx#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'si-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-down:before {
+    content: "\e803";
+}
+.icon-arrow-left:before {
+    content: "\e804";
+}
+.icon-arrow-right:before {
+    content: "\e805";
+}
+.icon-arrow-up:before {
+    content: "\e806";
+}
+.icon-client-7signal:before {
+    content: "\e808";
+}
+.icon-client-dinner-debate:before {
+    content: "\e80f";
+}
+.icon-client-donation-rocket:before {
+    content: "\e810";
+}
+.icon-client-vht:before {
+    content: "\e81a";
+}
+.icon-desktop:before {
+    content: "\e81f";
+}
+.icon-email:before {
+    content: "\e821";
+}
+.icon-list2:before {
+    content: "\e831";
+}
+.icon-logo:before {
+    content: "\e832";
+}
+.icon-logo-element:before {
+    content: "\e833";
+}
+.icon-magnify:before {
+    content: "\e834";
+}
+.icon-mobile:before {
+    content: "\e835";
+}
+.icon-social-dribbble:before {
+    content: "\e83c";
+}
+.icon-social-facebook:before {
+    content: "\e83d";
+}
+.icon-social-github:before {
+    content: "\e83e";
+}
+.icon-google-plus:before {
+    content: "\e83f";
+}
+.icon-social-linkedin:before {
+    content: "\e840";
+}
+.icon-social-twitter:before {
+    content: "\e841";
+}
+.icon-thumb:before {
+    content: "\e842";
+}
+.icon-wordpress:before {
+    content: "\e843";
+}
+.icon-pencil2:before {
+    content: "\e900";
+}
+.icon-image:before {
+    content: "\e901";
+}
+.icon-list:before {
+    content: "\e905";
+}
+.icon-menu:before {
+    content: "\e906";
+}
+.icon-cross:before {
+    content: "\e902";
+}
+.icon-checkmark:before {
+    content: "\e907";
+}
+.icon-circle-up:before {
+    content: "\e904";
+}
+.icon-checkbox-checked:before {
+    content: "\e908";
+}
+.icon-checkbox-unchecked:before {
+    content: "\e909";
+}
+
