@@ -74,41 +74,43 @@
     <div class="wrapper">
       <h1>Contact</h1>
       <div class="half">
-        <h2>How can we help you?</h2>
-        <ul class="checkbox-list">
-          <li>
-            <label>
-              <input type="checkbox" name="contact-method" />
-              <i class="icon icon-checkbox-unchecked"></i>
-              <span>I need help with a website.</span>
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" name="contact-method" />
-              <i class="icon icon-checkbox-unchecked"></i>
-              <span>I need help with a web application.</span>
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" name="contact-method" />
-              <i class="icon icon-checkbox-unchecked"></i>
-              <span>Tell me what I need.</span>
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" name="contact-method" />
-              <i class="icon icon-checkbox-unchecked"></i>
-              <span>Other</span>
-            </label>
-          </li>
-        </ul>
-        <input type="text" placeholder="Name" />
-        <input type="text" placeholder="Email" />
-        <textarea placeholder="Message"></textarea>
-        <input type="submit" value="Send Message" />
+        <form id="contact_form" method="post" action="form-process.php">
+          <h2>How can we help you?</h2>
+          <ul class="checkbox-list">
+            <li>
+              <label>
+                <input type="checkbox" name="contact-method" />
+                <i class="icon icon-checkbox-unchecked"></i>
+                <span>I need help with a website.</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="contact-method" />
+                <i class="icon icon-checkbox-unchecked"></i>
+                <span>I need help with a web application.</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="contact-method" />
+                <i class="icon icon-checkbox-unchecked"></i>
+                <span>Tell me what I need.</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="contact-method" />
+                <i class="icon icon-checkbox-unchecked"></i>
+                <span>Other</span>
+              </label>
+            </li>
+          </ul>
+          <input type="text" name="name" placeholder="Name" />
+          <input type="text" name="email" placeholder="Email" />
+          <textarea name="message" placeholder="Message"></textarea>
+          <input type="submit" value="Send Message" />
+        </form>
       </div>
       <div class="half">
         <h2>We're Social</h2>
@@ -137,108 +139,6 @@
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script>
-
-    $(document).ready(function() {
-      //find querystring value and scroll to element
-      var viewSection = get_urid('view');
-      if($('a[name="' + viewSection + '"]').length) {
-        var elem = $('a[name="' + viewSection + '"]');
-        scrollToDiv(elem);
-      }
-
-      $('.navigation').addClass('transition');
-    });
-
-    // check any link starting with # and scroll page to that anchor
-    $(document).on('click', 'a[href^="#"]', function() {
-      if($(this).attr('href') === "#") {
-        var target = '';
-        var elem = $('body');
-      } else {
-        var target = $(this).attr('href').split('#')[1];
-        var elem = $('a[name="' + target + '"]');
-      }
-      scrollToDiv(elem);
-      // setTimeout(function() {
-      //   window.location.hash = target;
-      // }, 800);
-      if($(this).parent().hasClass('navigation')) {
-        $('.navigation .active').removeClass('active');
-        $(this).addClass('active');
-      }
-
-      if($(this).attr('data-check')) {
-        var itemNumber = $(this).attr('data-check');
-        $('.checkbox-list li').each(function(index) {
-          if(parseInt(itemNumber) - 1 === index) {
-            $('input', this).prop('checked', true);
-          } else {
-            $('input', this).prop('checked', false);
-          }
-        });
-      }
-      return false;
-    });
-
-    // 
-    $(window).on('scroll', function () {
-      var windowScroll = $(this).scrollTop();
-
-      var sectionMap = [{
-        "sectionIndex": 0,
-        "section": "top",
-        "position": 0
-      }];
-      $('.navigation a').each(function(index) {
-        var sectionName = $(this).attr('href').split('#')[1];
-        var sectionPos = $('a[name="' + sectionName + '"]').next().offset();
-        var sectionTop = sectionPos.top;
-        sectionMap.push({
-          "sectionIndex": index + 1,
-          "section": sectionName,
-          "position": sectionTop
-        });
-      });
-
-      for(i=0;i<sectionMap.length;i++) {
-        if(windowScroll <= sectionMap[i].position) {
-          $('.navigation .active').removeClass('active');
-          $('.navigation a:nth-child(' + sectionMap[i].sectionIndex + ')').addClass('active');
-          break;
-        }
-      }
-
-      if (windowScroll >= $('.header').height()) {
-        $('body').addClass('scrolled');
-      } else {
-        $('body').removeClass('scrolled');
-      }
-    });
-
-    function scrollToDiv(element) {
-      var offset = element.offset();
-      if($('body').hasClass('scrolled')) {
-        var offsetTop = offset.top - 50;
-      } else {
-        var offsetTop = offset.top - 82;
-      }
-      $('body, html').animate({
-        scrollTop: offsetTop
-      }, 500);
-    }
-
-    function get_urid(name) {
-      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-      var regexS = "[\\?&]" + name + "=([^&#]*)";
-      var regex = new RegExp(regexS);
-      var results = regex.exec(window.location.href);
-      if (results == null)
-      return "";
-      else
-      return results[1];
-    }
-
-  </script>
+  <script src="scripts/interaction.js"></script>
 </body>
 </html>
