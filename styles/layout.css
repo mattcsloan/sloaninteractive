@@ -77,15 +77,28 @@ p
   left: 0;
   z-index: 100;
   width: 100%;
-  height: 82px;
+  height: 76px;
   transition: all 0.2s ease-in-out;
 }
 
-.header img
+.header .logo
 {
+  float: left;
+  display: block;
   padding: 12px 24px;
+}
+
+.header .logo img
+{
+  position: relative;
+  transition: all 0.2s ease-in-out;
   width: 113px;
-  transition: width 0.2s ease-in-out;
+  display: block;
+}
+
+.header .logo img + img
+{
+  z-index: -1;
 }
 
 .header .wrapper
@@ -482,11 +495,14 @@ body.scrolled
   box-shadow: 0 2px 18px rgba(0,0,0,0.02)
 }
 
-.scrolled .header img
+.scrolled .header .logo img
 {
-  padding-top: 12px;
-  padding-bottom: 12px;
   width: 86px;
+}
+
+.scrolled .header .logo img + img
+{
+  margin-top: -20px;
 }
 
 .scrolled .navigation a
