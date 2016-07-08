@@ -6,10 +6,9 @@
   <meta name="description" content="Sloan Interactive specializes in the design and development of responsive Wordpress themes and web applications." />
   <meta name="keywords" content="Sloan Interactive, Matt Sloan, Designer, Developer, UI, Columbus, Akron, Ohio" />
   <title>Sloan Interactive | Wordpress and Web application Design and Development | Ohio</title>
-  <link href="styles/layout.css" rel="stylesheet" type="text/css" />
-  <link href="styles/responsive.css" rel="stylesheet" type="text/css" />
+  <link href="styles/style.min.css" rel="stylesheet" type="text/css" />
   <link href="fonts/si-icons/style.css" rel="stylesheet" type="text/css" />
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
   <link href="img/favicon.png" rel="icon" type="image/png" />
   <link href="img/icon.png" rel="apple-touch-icon" sizes="114x114" />
 </head>
@@ -29,7 +28,7 @@
   </div>
   <div class="hero">
     <div class="wrapper">
-      <p>Specializing in the design and development of responsive <strong>Wordpress websites and web applications</strong></p>
+      <p>Specializing in the design and development of responsive <strong>Wordpress websites and&nbsp;web&nbsp;applications</strong></p>
     </div>
   </div>
   <a name="services"></a>
@@ -62,9 +61,9 @@
         <li>Small Websites</li>
         <li>Landing Pages</li>
         <li>Logo Design</li>
+        <li>Marketing</li>
         <li>Business Cards</li>
         <li>Postcards</li>
-        <li>Marketing</li>
       </ul>
     </div>
   </div>
@@ -80,41 +79,43 @@
     <div class="wrapper">
       <h1>Contact</h1>
       <div class="half">
-        <form id="contact_form" method="post" action="form-process.php">
+        <form id="contact-form" method="post" action="form-process.php">
           <h2>How can we help you?</h2>
           <ul class="checkbox-list">
             <li>
               <label>
-                <input type="checkbox" name="contact-method" />
+                <input type="radio" name="contact-method" value="Website" />
                 <i class="icon icon-checkbox-unchecked"></i>
                 <span>I need help with a website.</span>
               </label>
             </li>
             <li>
               <label>
-                <input type="checkbox" name="contact-method" />
+                <input type="radio" name="contact-method" value="Web Application" />
                 <i class="icon icon-checkbox-unchecked"></i>
                 <span>I need help with a web application.</span>
               </label>
             </li>
             <li>
               <label>
-                <input type="checkbox" name="contact-method" />
+                <input type="radio" name="contact-method" value="Not sure" />
                 <i class="icon icon-checkbox-unchecked"></i>
                 <span>Tell me what I need.</span>
               </label>
             </li>
             <li>
               <label>
-                <input type="checkbox" name="contact-method" />
+                <input type="radio" name="contact-method" value="Other" />
                 <i class="icon icon-checkbox-unchecked"></i>
                 <span>Other</span>
               </label>
             </li>
           </ul>
-          <input type="text" name="name" placeholder="Name" />
-          <input type="text" name="email" placeholder="Email" />
-          <textarea name="message" placeholder="Message"></textarea>
+          <input type="text" id="name" name="name" placeholder="Name *" />
+          <input type="text" id="email" name="email" placeholder="Email *" />
+          <input type="text" id="website" class="website" name="website" value=""  />
+          <textarea id="message" name="message" placeholder="Message *"></textarea>
+          <p class="validation-message">Please fill in all required fields.</p>
           <input type="submit" value="Send Message" />
         </form>
       </div>
@@ -144,9 +145,14 @@
       </div>
     </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="scripts/interaction.js"></script>
+  <div class="message-bar">
+    <div class="wrapper">
+      <a><i class="icon icon-cross"></i></a>
+    </div>
+  </div>
 
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/interaction.min.js"></script>
   <script>
     // Google Analytics
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

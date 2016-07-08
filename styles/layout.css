@@ -1,4 +1,4 @@
- body
+body
 {
   margin: 0;
   padding: 0;
@@ -365,7 +365,7 @@ a.caption:hover
   color: #0e3462;
 }
 
-.checkbox-list input[type="checkbox"]
+.checkbox-list input
 {
   display: none;
 }
@@ -381,33 +381,59 @@ a.caption:hover
   content: "\e908";
 }
 
-input[type="text"]
-{
-  display: block;
-  width: 100%;
-  background: #6295d1;
-  padding: 10px 16px;
-  color: #fff;
-  border: 0;
-  margin-bottom: 24px;
-  font-size: 16px;
-  box-sizing: border-box;
-}
-
+input[type="text"],
 textarea
 {
   display: block;
   width: 100%;
-  height: 200px;
+  max-width: 100%;
   background: #6295d1;
   padding: 10px 16px;
   color: #fff;
-  border: 0;
+  border: 1px solid transparent;
   margin-bottom: 24px;
   font-size: 16px;
   box-sizing: border-box;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #1d4e86;
+}
+
+input#website
+{
+  display: none; /* This is a honeypot input field that is not meant to be filled in */
+}
+
+textarea
+{
+  height: 200px;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
+
+.validation-message
+{
+  display: none;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  padding: 6px 16px;
+}
+
+input[type="text"].error,
+textarea.error
+{
+  border: 1px solid #cc0000;
+}
+
+::-webkit-input-placeholder { color: #b6ceea; } /* Chrome/Opera/Safari */
+::-moz-placeholder          { color: #b6ceea; } /* Firefox 19+ */
+:-ms-input-placeholder      { color: #b6ceea; } /* IE 10+ */
+:-moz-placeholder           { color: #b6ceea; } /* Firefox 18- */
 
 input[type="text"]:focus, textarea:focus
 {
@@ -430,6 +456,7 @@ input[type="submit"]
   display: block;
   float: right;
   border: 0;
+  -webkit-appearance: none;
 }
 
 input[type="submit"]:hover
@@ -478,13 +505,32 @@ input[type="submit"]:hover
   color: #0e3462;
 }
 
-
-/* Styles for smaller header (when page is scrolled) */
-
-.scroll-to-div:hover
+.message-bar
 {
+  padding: 60px 0;
+  background: #0e3462;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: 28px;
+  display: none;
+}
+
+.message-bar a
+{
+  float: right;
+  padding: 6px;
+}
+
+.message-bar a:hover
+{
+  color: #427bbf;
   cursor: pointer;
 }
+
+/* Styles for smaller header (when page is scrolled) */
 
 body.scrolled
 {

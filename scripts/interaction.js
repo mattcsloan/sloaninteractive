@@ -7,6 +7,59 @@ $(document).ready(function() {
   }
 
   $('.navigation').addClass('transition');
+
+  var messageDisplay = get_urid('message');
+  if(messageDisplay) {
+    if(messageDisplay === 'success') {
+      var message = "Thank you! Your message has been submitted successfully, and we'll be in touch shortly!";
+    } else if(messageDisplay === 'error') {
+      var message = "An error occurred. Please fill out all fields and try again, or send us an email.";
+    }
+
+    if(message) {
+      $('.message-bar .wrapper').append(message);
+    }
+
+    $('.message-bar').slideDown(300);
+    setTimeout(function() {
+      $('.message-bar').slideUp(300);
+    }, 9000);
+  }
+});
+
+$(document).on('click', '.message-bar a', function() {
+  $('.message-bar').slideUp(300);
+});
+
+$(document).on('submit', '#contact-form', function() {
+  var formIsValid = true;
+  $('input[type="text"], textarea', this).each(function() {
+    if($(this).val() === '' && !$(this).hasClass('website')) { // website input is a honeypot input to preent spam
+      $(this).addClass('error');
+      $('.validation-message').show();
+      formIsValid = false;
+    }
+  });
+  if(formIsValid === false || $('input#website').val().length != 0) {
+    return false;
+  } else {
+    return true;
+  }
+});
+
+$('input[type="text"], textarea').blur(function() {
+  var formIsValid = false;
+  $('input[type="text"], textarea', '#contact-form').each(function() {
+    if($(this).val() === '' && !$(this).hasClass('website')) { // website input is a honeypot input to preent spam
+      $(this).addClass('error');
+      formIsValid = false;
+      $('.validation-message').show();
+    } else {
+      $(this).removeClass('error');
+      formIsValid = true;
+      $('.validation-message').hide();
+    }
+  });
 });
 
 // check any link starting with # and scroll page to that anchor
@@ -19,9 +72,7 @@ $(document).on('click', 'a[href^="#"]', function() {
     var elem = $('a[name="' + target + '"]');
   }
   scrollToDiv(elem);
-  // setTimeout(function() {
-  //   window.location.hash = target;
-  // }, 800);
+
   if($(this).parent().hasClass('navigation')) {
     $('.navigation .active').removeClass('active');
     $(this).addClass('active');
@@ -94,8 +145,6 @@ function scrollEnd() {
 
 
       if((nextSectionThreshold && (windowScroll >= currentSectionThreshold && windowScroll < nextSectionThreshold)) || !nextSectionThreshold && windowScroll >= currentSectionThreshold) {
-
-        console.log("windowScroll: " + windowScroll + "; currentSectionThreshold: " + currentSectionThreshold + "; nextSectionThreshold: " + nextSectionThreshold);
         $('.navigation .active').removeClass('active');
         $('.navigation a:nth-child(' + sectionMap[i].sectionIndex + ')').addClass('active');
         break;
