@@ -3,13 +3,23 @@ body
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  background: #fcfcfc;
+  background: #f4f4f4;
   color: #666;
   font-size: 16px;
   padding-top: 82px;
 }
 
 h1
+{
+  font-weight: 400;
+  text-align: center;
+  font-size: 24px;
+  color: #427bbf;
+  line-height: 1.1em;
+  margin: 48px 0 24px 0;
+}
+
+h2
 {
   padding: 16px;
   margin: 0 0 24px 0;
@@ -21,7 +31,7 @@ h1
   position: relative;
 }
 
-h1:after
+h2:after
 {
   content: '';
   height: 1px;
@@ -33,7 +43,7 @@ h1:after
   margin-left: -50px;
 }
 
-h2
+h3
 {
   margin: 0 0 18px 0;
   line-height: 1.1em;
@@ -136,15 +146,6 @@ p
   border-bottom: 2px solid #427bbf;
 }
 
-.hero p
-{
-  text-align: center;
-  font-size: 24px;
-  color: #427bbf;
-  line-height: 1.1em;
-  margin: 48px 0 24px 0;
-}
-
 .hero strong
 {
   display: block;
@@ -178,14 +179,14 @@ p
   margin-right: 0;
 }
 
-.module h1
+.module h2
 {
   padding: 28px 16px;
   border-bottom: 1px solid #eee;
   margin-bottom: 0;
 }
 
-.module h1:after
+.module h2:after
 {
   display: none;
 }
@@ -236,7 +237,7 @@ a.btn:hover
   text-align: center;
 }
 
-a.caption
+.caption
 {
   font-size: 14px;
   color: #999;
@@ -249,12 +250,19 @@ a.caption:hover
   color: #666;
 }
 
+.caption a
+{
+  color: #427bbf;
+}
+
+.caption a:hover
+{
+  color: #1d4e86;
+}
+
 .other-services
 {
-  background: #fff;
-  box-shadow: 0 -12px 18px rgba(0,0,0,0.015);
-  margin-top: -48px;
-  padding-top: 48px;
+
 }
 
 .other-services ul
@@ -277,6 +285,7 @@ a.caption:hover
 
 .about
 {
+  background: #fff;
   padding-top: 24px;
   padding-bottom: 48px;
 }
@@ -305,7 +314,7 @@ a.caption:hover
   color: #fff;
 }
 
-.contact h1
+.contact h2
 {
   color: #d6e1ef;
 }

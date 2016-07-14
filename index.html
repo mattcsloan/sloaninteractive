@@ -1,4 +1,4 @@
-<doctype html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -6,6 +6,10 @@
   <meta name="description" content="Sloan Interactive specializes in the design and development of responsive Wordpress themes and web applications." />
   <meta name="keywords" content="Sloan Interactive, Matt Sloan, Designer, Developer, UI, Columbus, Akron, Ohio" />
   <title>Sloan Interactive | Wordpress and Web application Design and Development | Ohio</title>
+<!--
+  <link href="styles/layout.css" rel="stylesheet" type="text/css" />
+  <link href="styles/responsive.css" rel="stylesheet" type="text/css" />
+ -->
   <link href="styles/style.min.css" rel="stylesheet" type="text/css" />
   <link href="fonts/si-icons/style.css" rel="stylesheet" type="text/css" />
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
@@ -28,15 +32,16 @@
   </div>
   <div class="hero">
     <div class="wrapper">
-      <p>Specializing in the design and development of responsive <strong>Wordpress websites and&nbsp;web&nbsp;applications</strong></p>
+      <h1>Specializing in the design and development of responsive <strong>Wordpress websites and&nbsp;web&nbsp;applications</strong></h1>
     </div>
   </div>
   <a name="services"></a>
   <div class="modules wrapper">
     <div class="module">
-      <h1><span>Custom</span> Wordpress Themes</h1>
+      <h2>Wordpress Websites</h2>
       <div class="mod-content">
         <p>We build our responsive Wordpress themes and plugins from scratch to ensure they are lightweight and load fast for your users (compared to pre-built themes). <strong><em>Get a unique custom theme that is designed and built just for you.</em></strong></p>
+        <p class="caption">Wordpress is a Content Management System that enables you to update your own websites through an easy-to-use interface. It is great for any size of business. <a href="#contact" data-check="1">Contact us</a> for more information.</p>
         <a class="btn" href="#contact" data-check="1">Get Started</a>
         <p>
           <a class="caption" href="#contact" data-check="1">with a free quote</a>
@@ -44,9 +49,10 @@
       </div>
     </div>
     <div class="module">
-      <h1>Web Applications</h1>
+      <h2>Web Applications</h2>
       <div class="mod-content">
         <p>Whether you just need a little help with your web application or would like a full application created, we can help with that. We love working on these projects and can provide any level of design or development services needed.</p>
+        <p class="caption">We typically build our web applications using the MEAN stack (MongoDB, ExpressJS, AngularJS, and Node.JS). We also have experience in PHP and .Net applications. <a href="#contact" data-check="2">Contact us</a> for more information.</p>
         <a class="btn" href="#contact" data-check="2">Get Started</a>
         <p>
           <a class="caption" href="#contact" data-check="2">with a free quote</a>
@@ -56,31 +62,33 @@
   </div>
   <div class="other-services">
     <div class="wrapper">
-      <h1>Other Services</h1>
+      <h2>Other Services</h2>
       <ul>
-        <li>Small Websites</li>
+        <li>Microsites</li>
         <li>Landing Pages</li>
-        <li>Logo Design</li>
-        <li>Marketing</li>
+        <li>Branding</li>
+        <li>Print Design</li>
         <li>Business Cards</li>
         <li>Postcards</li>
       </ul>
     </div>
   </div>
   <a name="about"></a>
-  <div class="wrapper about">
-    <h1>About</h1>
-    <img src="img/social-profile.jpg" alt="Matt Sloan" />
-    <p>Sloan Interactive is mainly the work of Matt Sloan. The fact that you will see "we" used frequently is not meant to trick you. While the majority of your interaction will be with Matt, Sloan Interactive has many resources available when needed for services like copywriting and marketing. Depending on the size or complexity of the project, additional designers and developers can be included in your project as well.</p>
-    <p>Matt Sloan is a designer and developer with over 10 years of experience helping businesses to put their best foot forward through consistent branding from their logo to printed materials and into their digital presence.</p>
+  <div class="about">
+    <div class="wrapper">
+      <h2>About</h2>
+      <img src="img/social-profile.jpg" alt="Matt Sloan" />
+      <p>Sloan Interactive is mainly the work of Matt Sloan. The fact that you will see "we" used frequently is not meant to trick you. While the majority of your interaction will be with Matt, Sloan Interactive has many resources available when needed for services like copywriting and marketing. Depending on the size or complexity of the project, additional designers and developers can be included in your project as well.</p>
+      <p>Matt Sloan is a designer and developer with over 10 years of experience helping businesses to put their best foot forward through consistent branding from their logo to printed materials and into their digital presence.</p>
+    </div>
   </div>
   <a name="contact"></a>
   <div class="contact">
     <div class="wrapper">
-      <h1>Contact</h1>
+      <h2>Contact</h2>
       <div class="half">
         <form id="contact-form" method="post" action="form-process.php">
-          <h2>How can we help you?</h2>
+          <h3>How can we help you?</h3>
           <ul class="checkbox-list">
             <li>
               <label>
@@ -120,7 +128,7 @@
         </form>
       </div>
       <div class="half">
-        <h2>We're Social</h2>
+        <h3>We're Social</h3>
         <ul class="social-links">
           <li>
             <a class="fb" href="http://twitter.com/mattcsloan" target="_blank">

@@ -16,7 +16,7 @@
 
 
 @media all and (max-width : 800px) {
-  .hero p
+  h1
   {
     font-size: 18px;
     margin: 36px 0 18px 0;
@@ -27,7 +27,7 @@
     font-size: 28px;
   }
 
-  .module h1 span
+  .module h2 span
   {
     display: none;
   }
@@ -47,13 +47,13 @@
     padding-top: 97px;
   }
 
-  h1
+  h2
   {
     margin: 0 0 16px 0;
     padding-top: 0;
   }
 
-  h2
+  h3
   {
     margin: 0 0 16px 0;
   }
@@ -101,7 +101,7 @@
     line-height: 23px;
   }
 
-  .hero p
+  h1
   {
     margin: 20px 0 0 0;
   }
@@ -126,7 +126,7 @@
     margin: 0 0 16px 0;
   }
 
-  .module h1
+  .module h2
   {
     padding: 16px;
   }
